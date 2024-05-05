@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.9rem; /* 20an px, sebenarnya bebas mau pakai rem atau px */
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 1100;
+  margin: 0 auto;
+}
+
+/* title */
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: gray;
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.pre-title::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+/* logo dan navbar menu */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  transition: 0.2s ease-in-out;
+  background-color: rgb(199, 67, 6);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.logo a {
+  color: rgb(253, 250, 223);
+}
+
+nav ul li a {
+  color: rgb(253, 250, 223);
+}
+
+/* Home section */
+#home {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: rgb(253, 250, 223);
+}
+
+.home-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+  color: rgb(199, 67, 6);
+}
+
+.home-right img {
+  width: 450px;
+  border-radius: 0.7rem;
+}
+
+.home-right {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  padding-left: 3rem;
+  padding-bottom: 5rem;
+  color: rgb(199, 67, 6);
+}
+
+/* About Section */
+#about {
+  background-color: rgb(199, 67, 6);
+  padding: 6rem 0;
+  color: rgb(253, 250, 223);
+}
+
+.section-title-about {
+  text-align: center;
+  margin: 1rem 0 4rem;
+}
+
+/* layout */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin: 2rem;
+}
+
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: rgb(253, 250, 223);
+  border-radius: 0.7rem;
+}
+
+.about h4 {
+  color: rgb(199, 67, 6);
+  margin: 1rem 0 2.5rem;
+}
+
+.about p {
+  color: rgb(199, 67, 6);
+}
+
+.about-icon {
+  background-color: rgb(199, 67, 6);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+/* End About */
+
+/* Skills & Experience */
+#skills {
+  padding: 6rem 0;
+  background: rgb(253, 250, 223);
+}
+
+.section-titles-skills {
+  text-align: center;
+  margin: 1rem 0 4rem;
+  color: rgb(199, 67, 6);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  color: rgb(199, 67, 6);
+}
+
+.experience {
+  display: flex;
+  gap: 2rem;
+}
+
+.experience line {
+  padding: 0 0.7rem;
+}
+
+.experience .line div {
+  width: 2px;
+  height: 100%;
+  background: rgb(199, 67, 6);
+  position: relative;
+  margin: 2rem;
+}
+
+.experience-info {
+  margin: 0.3rem 0;
+}
+
+.experience-date {
+  margin-bottom: 3rem;
+}
+
+.experience .line div::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: rgb(199, 67, 6);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1.5rem;
+}
+
+.skills-right {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+/* End Skills & Experience */
+
+/* Contact Section */
+#contact {
+  padding: 6rem;
+  background: rgb(253, 250, 223);
+}
+
+.contact-form div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Robot", sans-serif;
+  background: white;
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgb(199, 67, 6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid gray;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: rgb(199, 67, 6);
+  color: rgb(253, 250, 223);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: rgb(209, 207, 207);
+  color: rgb(199, 67, 6);
+}
+/* End Contact */
+
+/* Footer Section*/
+footer {
+  margin-bottom: 0;
+  padding: 4rem 0;
+  background: rgb(199, 67, 6);
+  text-align: center;
+}
+
+footer p {
+  color: rgb(253, 250, 223);
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rems;
+}
+
+.footer-icons a:hover {
+  fill: black;
+}
+
+.footer-icons {
+  fill: gray;
+}
